@@ -73,10 +73,10 @@ docker push chickenapp.azurecr.io/chicken:latest
 
 #### Deployment steps
 
-Build the Docker image of the Source Code
-Push the Docker image to Container Registry
-Launch the Web App Server in Azure
-Pull the Docker image from the container registry to Web App server and run
+1. Build the Docker image of the Source Code
+2. Push the Docker image to Container Registry
+3. Launch the Web App Server in Azure
+4. Pull the Docker image from the container registry to Web App server and run
 
 
 
