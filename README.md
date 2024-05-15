@@ -23,12 +23,12 @@ https://github.com/rrrreddy/Chicken-Disease-Classification.git
 #### Create a conda environment
 
 ```
-conda create -n cdc python=3.7 -y
+conda create -n cnncls python=3.7 -y
 ```
 #### Activate the environment
 
 ```
-conda activate cdc
+conda activate cnncls
 ```
 #### Install the dependencies
 
