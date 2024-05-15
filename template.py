@@ -13,7 +13,7 @@ list_of_files = [
     f"src/{project_name}/components/__init__.py",
     f"src/{project_name}/utils/__init__.py",
     f"src/{project_name}/config/__init__.py",
-    f"src/{project_name}/components/configuration.py",
+    f"src/{project_name}/config/configuration.py",
     f"src/{project_name}/pipeline/__init__.py",
     f"src/{project_name}/entity/__init__.py",
     f"src/{project_name}/constants/__init__.py",
@@ -23,7 +23,12 @@ list_of_files = [
     "requirements.txt",
     "setup.py",
     "research/trails.ipynb",
-    "templates/index.html"
+    "templates/index.html",
+    "README.md",
+    f"src/{project_name}/entity/config_entity.py"
+    f"src/{project_name}/pipeline/data_ingestion.py",
+    f"src/{project_name}/utils/common.py",
+    f"src/{project_name}/components/data_ingestion.py"
 ]
 
 for filepath in list_of_files:

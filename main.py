@@ -1,8 +1,17 @@
 from cnnClassifier import logger
+from cnnClassifier.pipeline.stage_01_data_ingestion import DataIngestionTrainingPipeline
 
-logger.info("Welcome to my custom log")
-logger.debug("This is a debug message")
-logger.warning("This is a warning message")
-logger.error("This is an error message")
-logger.critical("This is a critical message")
-logger.fatal("This is a fatal message")
+
+STAGE_NAME = "Data Ingestion Stage"
+
+if __name__ == "__main__":
+    try:
+        logger.info(f">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>Starting {STAGE_NAME}>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>")
+        obj=DataIngestionTrainingPipeline()
+        obj.main()
+        logger.info(f">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>Ending {STAGE_NAME}>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>")
+    except Exception as e:
+        logger.error(f"Error in {STAGE_NAME}: {e}")
+        raise e
+
+STAGE_NAME = "Prepare base model"
