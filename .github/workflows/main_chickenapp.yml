@@ -23,14 +23,14 @@ jobs:
       uses: docker/login-action@v2
       with:
         registry: https://chickenapprrr.azurecr.io/
-        username: ${{ secrets.AzureAppService_ContainerUsername_b2752431abce4a9fa2bca6c5b579bf9f }}
-        password: ${{ secrets.AzureAppService_ContainerPassword_0fa343e17d684e25bb81473c05e2d57d }}
+        username: ${{ secrets.AzureAppService_ContainerUsername_956daa9541914c0db10ecb4daafbd2aa }}
+        password: ${{ secrets.AzureAppService_ContainerPassword_d7743053df494e7caee8162bc95ec502 }}
 
     - name: Build and push container image to registry
       uses: docker/build-push-action@v3
       with:
         push: true
-        tags: chickenapprrr.azurecr.io/${{ secrets.AzureAppService_ContainerUsername_b2752431abce4a9fa2bca6c5b579bf9f }}/chicken:${{ github.sha }}
+        tags: chickenapprrr.azurecr.io/${{ secrets.AzureAppService_ContainerUsername_956daa9541914c0db10ecb4daafbd2aa }}/chicken:${{ github.sha }}
         file: ./Dockerfile
 
   deploy:
@@ -47,5 +47,5 @@ jobs:
       with:
         app-name: 'chickenapp'
         slot-name: 'production'
-        publish-profile: ${{ secrets.AzureAppService_PublishProfile_ea9b50ef9d984ee29198ce31152009ec }}
-        images: 'chickenapprrr.azurecr.io/${{ secrets.AzureAppService_ContainerUsername_b2752431abce4a9fa2bca6c5b579bf9f }}/chicken:${{ github.sha }}'
+        publish-profile: ${{ secrets.AzureAppService_PublishProfile_d71c8d1cb6ff485089773e6343b343bb }}
+        images: 'chickenapprrr.azurecr.io/${{ secrets.AzureAppService_ContainerUsername_956daa9541914c0db10ecb4daafbd2aa }}/chicken:${{ github.sha }}'
